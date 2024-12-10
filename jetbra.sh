@@ -60,6 +60,10 @@ esac
 
 print_green "当前系统为：" "${os_name}_${hw_name}"
 
+if [ ! -z $1 ]; then
+  echo $1 >~/.jetbrarc
+fi
+
 url="https://ghp.ci/https://github.com/xiaoxuan6/jetbra-activate/releases/download/v1.0.0"
 
 function download() {
